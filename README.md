@@ -9,8 +9,7 @@ Steps:
   * Runs the app in the development mode.\
   * Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Demo
-
+## Demo
 https://user-images.githubusercontent.com/61196454/118312841-9bebf080-b50f-11eb-9d29-4e1b1c2a5683.mp4
 
 
