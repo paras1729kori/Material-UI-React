@@ -1,5 +1,5 @@
 # Material UI for React
-A Complete walk-through of basic MUI Components.
+Code Snippets of basic MUI Components.
 
 Steps:
 * Intall [Node](https://nodejs.org/en/download/)
