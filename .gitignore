@@ -1,4 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+materialui_running_notes.txt
 
 # dependencies
 /node_modules
