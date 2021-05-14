@@ -1,0 +1,105 @@
+About Material UI:
+React components for faster and easier web development.
+It gives a variety of options for making your app stand out
+
+
+Installation:
+Run yarn add @material-ui/core
+
+
+Icons:
+Installing dependency: yarn add @material-ui/icons
+Importing:
+import IconName from '@material-ui/icons/Icon'
+Adding them as an attribute:
+1. startIcon = { <IconName /> } -- for adding icon in the start
+2. endIcon = { <IconName /> } -- for adding icon in the end
+
+
+Components -- ComponentName (Attributes):
+1. Button
+    (variant="contained/outlined",
+    color="primary/secondary",
+    size="small/large)
+    Note: Make it a href, a plain button or add keyword "disabled" to disable it
+2. FormControlLabel -- Making forms in React
+    (control = {pass any thing which goes in forms})
+3. Checkbox (checked, inputProps, 
+    icon={<IconName />}
+    checkedIcon={<IconName />}
+    )
+4. TextField -- Adding Inputs
+    (variant="filled/outlined", color="primary/secondary",
+    type="date/time/email", placeholder="whatever you wanna write")
+
+
+Styling in Material UI:
+import { makeStyles } from '@material-ui/core/styles'
+const stylerName = makeStyles({
+    root: {
+        ....
+        ...
+        ..
+    }
+})
+const ComponentName1 = () => {
+    const varName = stylerName()
+    return <ComponentName2 className={varName.root} />
+}
+App.js
+....
+<ComponentName1  />
+....
+
+
+Changing the Entire Theme:
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+import { color1, color2 } from '@material-ui/core/colors' 
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: color1[val],
+        },
+        secondary; {
+            main: color2[val]
+        },
+    }
+})
+We can nest themes (for inner and outer themes) [Read Documentation]
+
+
+Typography:
+Installing the fontsource-roboto:
+yarn add fontsource-roboto
+import 'fontsource-roboto'
+import { Typography } from '@material-ui/core'
+<Typography variant="h1/h2/...." component="div/etc">
+ Statement
+</Typography>
+Add typography in createMuiTheme() and make changes accordingly
+
+
+Continuation of Components (Phase 2):
+5. Container (maxWidth="xs/sm/md")
+6. Grid -- Used for making obvio GRIDS
+    i. Giving container special attr makes the Grid parent
+    ii. Giving item special attr makes them child of parent
+    (direction="row/column", justify="left/right/center", 
+    alignItems="left/right/center")
+7. AppBar -- Addind a bar to your app
+    import { AppBar, ToolBar, IconButton } from '@material-ui/core'
+    import MenuIcon from '@material-ui/icons/Menu'
+    code..
+    <AppBar color="secondary">
+        <Toolbar>
+        <IconButton>
+            <MenuIcon />
+        </IconButton>
+        <Typography variant="h6">
+            MUI Themeing
+        </Typography>
+        <Button style={{float:""}}>
+            Login
+        </Button>
+        </Toolbar>
+    </AppBar>
